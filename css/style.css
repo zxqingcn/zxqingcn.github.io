@@ -3,9 +3,12 @@ body {
   font-family: system-ui, sans-serif;
   line-height: 1.6;
   background-color: #f3f8ff;
-  display: flex;
   justify-content: center;
   margin-top: 50px;
+}
+
+div {
+  display: block;
 }
 
 .container {
@@ -25,6 +28,7 @@ th, td {
 }
 
 .slider {
+    display: block;
     width: 500px;
     position: relative;
     text-align: center;
