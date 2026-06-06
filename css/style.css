@@ -2,6 +2,7 @@ body {
   margin: 0;
   font-family: system-ui, sans-serif;
   line-height: 1.6;
+  background-color: #f3f8ff;
 }
 
 .container {
