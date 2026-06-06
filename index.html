@@ -25,7 +25,15 @@
       <li>第六章&nbsp;人工神经网络（<a href="https://zxqingcn.github.io/pdf/ch06.pdf" target=_blank>PDF</a>）</li>
       <li>第七章&nbsp;深度学习（<a href="https://zxqingcn.github.io/pdf/ch07.pdf" target=_blank>PDF</a>）</li>
     </ul>
+    </div>
 
+    <div class="slider">
+      <button class="btn prev" onclick="prevImg()">‹</button>
+      <img id="sliderImg" src="https://zxqingcn.github.io/img/img01.png">
+     <button class="btn next" onclick="nextImg()">›</button>
+    </div>
+
+    <div class="container">
     <h2>本书所有章节</h2>
     <table>
       <tr><td>第一章</td><td>绪论（<a href="https://zxqingcn.github.io/pdf/ch01.pdf" target=_blank>PDF</a>）</td></tr>
@@ -45,6 +53,43 @@
       <tr><td>第十一章</td><td>强化学习</td></tr>
     </table>
     </div>
+  
+    <script>
+      const images = [
+        "https://zxqingcn.github.io/img/img01.png",
+        "https://zxqingcn.github.io/img/img02.png",
+        "https://zxqingcn.github.io/img/img03.png",
+        "https://zxqingcn.github.io/img/img04.png",
+        "https://zxqingcn.github.io/img/img05.png",
+        "https://zxqingcn.github.io/img/img06.png",
+        "https://zxqingcn.github.io/img/img07.png",
+        "https://zxqingcn.github.io/img/img08.png",
+        "https://zxqingcn.github.io/img/img09.png",
+        "https://zxqingcn.github.io/img/img10.png",
+        "https://zxqingcn.github.io/img/img11.png",
+        "https://zxqingcn.github.io/img/img12.png",
+        "https://zxqingcn.github.io/img/img13.png",
+        "https://zxqingcn.github.io/img/img14.png",
+        "https://zxqingcn.github.io/img/img15.png",
+      ];
+
+      let index = 0;
+      const img = document.getElementById("sliderImg");
+
+      function showImg() {
+        img.src = images[index];
+      }
+
+      function nextImg() {
+        index = (index + 1) % images.length;
+        showImg();
+      }
+
+      function prevImg() {
+        index = (index - 1 + images.length) % images.length;
+      showImg();
+      }
+    </script>
     
   </body>
 </html>
