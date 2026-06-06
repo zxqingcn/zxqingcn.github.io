@@ -29,7 +29,7 @@ th, td {
 
 .slider {
     display: block;
-    width: 500px;
+    width: 800px;
     position: relative;
     text-align: center;
   }
@@ -37,7 +37,6 @@ th, td {
   .slider img {
     width: 100%;
     height: auto;
-    object-fit: cover;
     border-radius: 10px;
   }
 
