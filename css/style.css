@@ -1,61 +1,113 @@
 body {
-  margin: 0;
-  font-family: system-ui, sans-serif;
-  line-height: 1.6;
-  background-color: #f3f8ff;
-  justify-content: center;
-  margin-top: 50px;
+    margin: 0;
+    padding-top: 50px;
+    font-family: system-ui, sans-serif;
+    line-height: 1.6;
+    background-color: #f3f8ff;
 }
 
-div {
-  display: block;
-}
-
+/* 正文区域 */
 .container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 40px 24px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 24px;
 }
 
+/* 章节目录表格 */
 table {
     border-collapse: collapse;
 }
 
 th, td {
     border: none;
-    padding: 4px 8px; 
+    padding: 4px 8px;
     line-height: 1.2;
 }
 
+/* 图片轮播区域 */
 .slider {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px;
-    margin: 30px auto;
+
+    width: calc(100% - 48px);
+    max-width: 900px;
+    margin: 30px auto 60px;
+    box-sizing: border-box;
 }
 
+/* 图片居中显示 */
 .slider img {
-    max-width: 80%;
-    height: auto;
     display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
 }
 
-  .btn {
+/* 左右切换按钮 */
+.btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0,0,0,0.5);
+
+    background: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
-    padding: 10px;
+    border-radius: 4px;
+
+    padding: 10px 14px;
+    font-size: 22px;
     cursor: pointer;
-  }
+    z-index: 1;
+}
 
-  .prev {
+/* 左侧按钮 */
+.prev {
     left: 10px;
-  }
+}
 
-  .next {
+/* 右侧按钮 */
+.next {
     right: 10px;
-  }
+}
+
+/* 鼠标悬停效果 */
+.btn:hover {
+    background: rgba(0, 0, 0, 0.75);
+}
+
+/* 小屏幕适配 */
+@media (max-width: 600px) {
+
+    body {
+        padding-top: 20px;
+    }
+
+    .container {
+        padding: 20px 16px;
+    }
+
+    .slider {
+        width: calc(100% - 32px);
+        margin: 20px auto 40px;
+    }
+
+    .slider img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .btn {
+        padding: 6px 10px;
+        font-size: 18px;
+    }
+
+    .prev {
+        left: 5px;
+    }
+
+    .next {
+        right: 5px;
+    }
+}
