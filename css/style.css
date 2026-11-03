@@ -28,17 +28,18 @@ th, td {
 }
 
 .slider {
-    display: block;
-    width: 800px;
-    position: relative;
-    text-align: center;
-  }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 30px auto;
+}
 
-  .slider img {
-    width: 100%;
+.slider img {
+    max-width: 80%;
     height: auto;
-    border-radius: 10px;
-  }
+    display: block;
+}
 
   .btn {
     position: absolute;
